@@ -140,20 +140,14 @@ Alternatively, you can use `degit` to scaffold the template without cloning the 
 
 ```
 client/
-|-- serc/
-|   |-- connectDB.js
-|   |-- asyncHandler.js
-|-- controllers/
-|   |-- Controller.js
-|   |-- AuthController.js
-|-- middleware/
-|   |-- errorHandler.js
-|-- models/
-|   |-- Model.js
-|   |-- userModel.js
-|-- routes/
-|   |-- Router.js
-|   |-- AuthRouter.js
+|-- src/
+|   |-- assets/
+|   |-- components/
+|   |-- pages/
+|   |-- App.css
+|   |-- App.jsx
+|   |-- index.css
+|   |-- main-jsx
 |-- .eslintrccjs
 |-- .gitignore
 |-- index.html
