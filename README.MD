@@ -143,6 +143,8 @@ client/
 |-- src/
 |   |-- assets/
 |   |-- components/
+|       |-- Login.jsx
+|       |-- Register.jsx
 |   |-- pages/
 |   |-- App.css
 |   |-- App.jsx
@@ -176,19 +178,182 @@ server/
 |-- seeder.js
 |-- server.js
 ```
+
+## Features
+
+-   **Client:**
+    -   **React:** A JavaScript library for building user interfaces.
+    -   **Vite:** A build tool that aims to provide a faster and leaner development experience for modern web projects.
+    -   **React Router:** A standard routing library for React.
+    -   **Axios:** A promise-based HTTP client for the browser and Node.js.
+-   **Server:**
+    -   **Node.js:** A JavaScript runtime built on Chrome's V8 JavaScript engine.
+    -   **Express:** A minimal and flexible Node.js web application framework.
+    -   **MongoDB:** A general-purpose, document-based, distributed database built for modern application developers and the cloud era.
+    -   **Mongoose:** An Object Data Modeling (ODM) library for MongoDB and Node.js.
+    -   **cors:** A Node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
+    -   **dotenv:** A zero-dependency module that loads environment variables from a `.env` file into `process.env`.
+    -   **nodemon:** A utility that will monitor for any changes in your source and automatically restart your server.
+    -   **morgan:** An HTTP request logger middleware for Node.js.
+    -   **bcryptjs:** A library to help you hash passwords.
+    -   **jsonwebtoken:** An implementation of JSON Web Tokens.
+
+## Scripts
+
+-   **Client:**
+
+    -   `pnpm run dev`: Starts the development server.
+    -   `pnpm run build`: Builds the app for production.
+    -   `pnpm run lint`: Lints the code using ESLint.
+    -   `pnpm run preview`: Serves the production build locally.
+
+-   **Server:**
+    -   `pnpm run dev`: Starts the development server.
+
 ## Customization
 
 Feel free to customize the template based on your project requirements. You can add additional dependencies, components, styles, or configurations as needed. The goal is to keep the initial setup minimal, allowing you to build upon it according to your preferences.
 
+## Environment Variables
+
+-   Check the `.env` file in the `server` directory.
+
+    ```env
+    PORT=3300
+    MONGODB_URI=your_mongodb_uri
+    MONGODB_LOCAL=mongodb://localhost:27017/modelDB
+    JWT_SECRET=your_jwt_secret
+    ```
+
+You can define your environment variables in this file.
+Feel free to add more variables as needed and modify the existing ones with your values.
+
+## ESLint
+
+-   ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
+
+-   The ESLint configuration file is located at `client/.eslintrc.js`.
+
+-   You can modify the ESLint configuration based on your preferences.
+
+## Vite Configuration
+
+-   The Vite configuration file is located at `client/vite.config.js`.
+
+-   You can modify the Vite configuration based on your preferences.
+
+## Alias Configuration
+
+You can define aliases for directories in the Vite configuration file. That way, you can import modules using the aliases instead of relative paths. Doing in this way can make your imports cleaner and more organized.
+
+For example, you can define aliases for `@components`, `@styles`, `@utils`, etc.
+
+Here's an example of how you can define aliases in the Vite configuration file:
+
+```js
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+// https://vitejs.dev/config/
+export default defineConfig({
+    plugins: [react()],
+    resolve: {
+        alias: {
+            "@components": "/src/components",
+            "@styles": "/src/styles",
+            "@utils": "/src/utils",
+            "@assets": "/src/assets",
+            "@pages": "/src/pages",
+            "@hooks": "/src/hooks",
+            "@contexts": "/src/contexts",
+            "@layouts": "/src/layouts",
+            "@services": "/src/services",
+            "@config": "/src/config",
+            "@api": "/src/api",
+            "@types": "/src/types",
+            "@sections": "/src/sections",
+            "@icons": "/src/icons"
+        }
+    }
+});
+```
+
+Here is the configuration for the paths in the jsconfig.json file:
+
+```json
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@*": ["src/*"]
+        }
+    }
+}
+```
+And then you can import modules using the aliases:
+
+```js
+import Button from "@components/Button";
+import { fetchData } from "@utils/fetchData";
+```
+
+## React Router Configuration
+
+-   The React Router configuration is located in the `client/src/App.jsx` file.
+
+-   You can modify the React Router configuration based on your preferences.
+
+## Express Configuration
+
+-   The Express configuration is located in the `server/server.js` file.
+
+-   You can modify the Express configuration based on your preferences.
+
+## MongoDB Connection
+
+-   The MongoDB connection is established in the `server/config/connectDB.js` file.
+
+-   You can modify the MongoDB connection based on your preferences.
+
+## Mongoose Models
+
+-   The Mongoose models are defined in the `server/models` directory.
+
+-   You can define your Mongoose models based on your project requirements.
+
+## Routes
+
+-   The routes are defined in the `server/routes` directory.
+
+-   You can define your routes based on your project requirements.
+
+## Controllers
+
+-   The controllers are defined in the `server/controllers` directory.
+
+-   You can define your controllers based on your project requirements.
+
+## Middleware
+
+-   The middleware functions are defined in the `server/middleware` directory.
+
+-   You can define your middleware functions based on your project requirements.
+
+## Error Handling
+
+-   The error handling middleware is defined in the `server/middleware/errorHandler.js` file.
+
+-   You can modify the error handling middleware based on your preferences.
+
 ## Additional Resources
 
-- [Vite Documentation](https://vitejs.dev/guide/)
-- [React Documentation](https://react.dev/)
-- [pnpm Documentation](https://pnpm.io/)
-- [Degit Documentation](https://www.npmjs.com/package/degit)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [Express Documentation](https://expressjs.com/)
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Mongoose Documentation](https://mongoosejs.com/docs/)
-- [Axios Documentation](https://axios-http.com/docs/intro)
-- [React Router Documentation](https://reactrouter.com/en/6.22.3)
+-   [Vite Documentation](https://vitejs.dev/guide/)
+-   [React Documentation](https://react.dev/)
+-   [pnpm Documentation](https://pnpm.io/)
+-   [Degit Documentation](https://www.npmjs.com/package/degit)
+-   [Node.js Documentation](https://nodejs.org/en/docs/)
+-   [Express Documentation](https://expressjs.com/)
+-   [MongoDB Documentation](https://docs.mongodb.com/)
+-   [Mongoose Documentation](https://mongoosejs.com/docs/)
+-   [Axios Documentation](https://axios-http.com/docs/intro)
+-   [React Router Documentation](https://reactrouter.com/en/6.22.3)
