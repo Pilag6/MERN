@@ -1,13 +1,117 @@
-
+<img src="./MERN.png" />
 ---
 
-1. ## Setup Node.js and npm
+### This template provides a minimal MERN setup. It's configured to use `pnpm` as the package manager.
+
+1. ## Setup Node.js, npm, pnpm and degit
 
 -   Install **_Node_** and **_npm_**
--   https://nodejs.org/en (LTS Recommended)
+    -   Download the latest version of Node.js and npm from [here](https://nodejs.org/en).
+    -   Install Node.js and npm by following the installation wizard. 
+
+-   Install **_pnpm_** globally by running the following command in your terminal:
+
+```bash
+npm install -g pnpm
+```
+
+-   Install **_degit_** globally by running the following command in your terminal:
+
+```bash
+npm install -g degit
+```
 
 2. ## Initialize the MERN Starter Kit
 
+### Option 1: Clone the Repository and Remove Git History
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/Pilag6/MERN.git
+   ```
+
+2. **Navigate to the Project Directory:**
+
+   ```bash
+   cd MERN
+   ```
+
+3. **Remove Existing Git History:**
+
+   ```bash
+   rm -rf .git
+   ```
+
+   This command will remove the existing Git history. That way, you can start fresh with your own Git repository.
+
+4. **Initialize a New Git Repository:**
+
+   ```bash
+   git init
+   ```
+
+   This command initializes a new Git repository for your project.
+
+5. **Install Dependencies using pnpm:**
+
+   ```bash
+   pnpm install
+   ```
+
+   This command installs project dependencies using pnpm. If you don't have pnpm installed, you can install it globally using `npm install -g pnpm`.
+
+6. **Run the Development Server:**
+
+   ```bash
+   pnpm run dev
+   ```
+
+   This command will start the development server, and you can access your React application at `http://localhost:5173`.
+
+### Option 2: Use degit
+
+Alternatively, you can use `degit` to scaffold the template without cloning the entire repository.
+
+1. **Use degit to Fetch the Template:**
+
+   ```bash
+   npx degit Pilag6/rvct my-react-app
+   ```
+
+   This command fetches the template without Git history and renames the project to `my-react-app`. You can replace `my-react-app` with your preferred project name.
+
+   If you don't have `degit` installed, you can install it globally using `npm install -g degit`.
+
+2. **Navigate to the Project Directory:**
+
+   ```bash
+   cd my-react-app
+   ```
+
+3. **Initialize a New Git Repository:**
+
+   ```bash
+   git init
+   ```
+
+   This command initializes a new Git repository for your project.
+
+4. **Install Dependencies using pnpm:**
+
+   ```bash
+   pnpm install
+   ```
+
+   This command installs project dependencies using pnpm. If you don't have pnpm installed, you can install it globally using `npm install -g pnpm`.
+
+5. **Run the Development Server:**
+
+   ```bash
+   pnpm run dev
+   ```
+
+   This command will start the development server, and you can access your React application at `http://localhost:5173`.
 
 8. ## Folder Structure
 
@@ -19,18 +123,43 @@
 -   **Controller:** Acts as an interface between Model and View components to process all the business logic and incoming requests, manipulate data using the Model component, and interact with the Views to render the final output.
 
 ```
+client/
+|-- serc/
+|   |-- connectDB.js
+|   |-- asyncHandler.js
+|-- controllers/
+|   |-- Controller.js
+|   |-- AuthController.js
+|-- middleware/
+|   |-- errorHandler.js
+|-- models/
+|   |-- Model.js
+|   |-- userModel.js
+|-- routes/
+|   |-- Router.js
+|   |-- AuthRouter.js
+|-- .eslintrccjs
+|-- .gitignore
+|-- index.html
+|-- jsconfig.json
+|-- package.json
+|-- vite.config.js
+
 server/
 |-- config/
 |   |-- connectDB.js
-|-- controllers/
-|   |-- itemController.js
-|-- middleware/
 |   |-- asyncHandler.js
+|-- controllers/
+|   |-- Controller.js
+|   |-- AuthController.js
+|-- middleware/
 |   |-- errorHandler.js
 |-- models/
-|   |-- ItemModel.js
+|   |-- Model.js
+|   |-- userModel.js
 |-- routes/
-|   |-- itemRouter.js
+|   |-- Router.js
+|   |-- AuthRouter.js
 |-- .env
 |-- .gitignore
 |-- package.json
