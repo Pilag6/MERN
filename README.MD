@@ -59,8 +59,8 @@ npm install -g degit
     cd client
     pnpm install
 
-     cd ../server
-     pnpm install
+    cd ../server
+    pnpm install
     ```
 
     This command installs project dependencies using pnpm. If you don't have pnpm installed, you can install it globally using `npm install -g pnpm`.
