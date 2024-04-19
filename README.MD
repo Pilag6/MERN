@@ -2,7 +2,7 @@
 
 ### This template provides a minimal MERN setup. It's configured to use `pnpm` as the package manager.
 
-1. ## Setup Node.js, npm, pnpm and degit
+## Setup Node.js, npm, pnpm and degit
 
 -   Install **_Node_** and **_npm_**
 
@@ -21,7 +21,7 @@ npm install -g pnpm
 npm install -g degit
 ```
 
-2. ## Initialize the MERN Starter Kit
+## Initialize the MERN Starter Kit
 
 ### Option 1: Clone the Repository and Remove Git History
 
@@ -129,7 +129,7 @@ Alternatively, you can use `degit` to scaffold the template without cloning the 
 
     This command will start the development server in the port `http://localhost:3300`, and you can access your React application at `http://localhost:5173`.
 
-6. ## Folder Structure
+## Folder Structure
 
 -   We are going to follow the **MVC (Model-View-Controller)** pattern for our project structure.
 -   **MVC** is a _software design pattern_ that divides the application into three interconnected components: the model, the view, and the controller.
@@ -176,3 +176,19 @@ server/
 |-- seeder.js
 |-- server.js
 ```
+## Customization
+
+Feel free to customize the template based on your project requirements. You can add additional dependencies, components, styles, or configurations as needed. The goal is to keep the initial setup minimal, allowing you to build upon it according to your preferences.
+
+## Additional Resources
+
+- [Vite Documentation](https://vitejs.dev/guide/)
+- [React Documentation](https://react.dev/)
+- [pnpm Documentation](https://pnpm.io/)
+- [Degit Documentation](https://www.npmjs.com/package/degit)
+- [Node.js Documentation](https://nodejs.org/en/docs/)
+- [Express Documentation](https://expressjs.com/)
+- [MongoDB Documentation](https://docs.mongodb.com/)
+- [Mongoose Documentation](https://mongoosejs.com/docs/)
+- [Axios Documentation](https://axios-http.com/docs/intro)
+- [React Router Documentation](https://reactrouter.com/en/6.22.3)
