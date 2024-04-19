@@ -1,13 +1,13 @@
-<img src="./MERN.png" />
----
+## <img src="./MERN.png" />
 
 ### This template provides a minimal MERN setup. It's configured to use `pnpm` as the package manager.
 
 1. ## Setup Node.js, npm, pnpm and degit
 
 -   Install **_Node_** and **_npm_**
+
     -   Download the latest version of Node.js and npm from [here](https://nodejs.org/en).
-    -   Install Node.js and npm by following the installation wizard. 
+    -   Install Node.js and npm by following the installation wizard.
 
 -   Install **_pnpm_** globally by running the following command in your terminal:
 
@@ -27,47 +27,55 @@ npm install -g degit
 
 1. **Clone the Repository:**
 
-   ```bash
-   git clone https://github.com/Pilag6/MERN.git
-   ```
+    ```bash
+    git clone https://github.com/Pilag6/MERN.git
+    ```
 
 2. **Navigate to the Project Directory:**
 
-   ```bash
-   cd MERN
-   ```
+    ```bash
+    cd MERN
+    ```
 
 3. **Remove Existing Git History:**
 
-   ```bash
-   rm -rf .git
-   ```
+    ```bash
+    rm -rf .git
+    ```
 
-   This command will remove the existing Git history. That way, you can start fresh with your own Git repository.
+    This command will remove the existing Git history. That way, you can start fresh with your own Git repository.
 
 4. **Initialize a New Git Repository:**
 
-   ```bash
-   git init
-   ```
+    ```bash
+    git init
+    ```
 
-   This command initializes a new Git repository for your project.
+    This command initializes a new Git repository for your project.
 
 5. **Install Dependencies using pnpm:**
 
-   ```bash
-   pnpm install
-   ```
+    ```bash
+    cd client
+    pnpm install
 
-   This command installs project dependencies using pnpm. If you don't have pnpm installed, you can install it globally using `npm install -g pnpm`.
+     cd ../server
+     pnpm install
+    ```
 
-6. **Run the Development Server:**
+    This command installs project dependencies using pnpm. If you don't have pnpm installed, you can install it globally using `npm install -g pnpm`.
 
-   ```bash
-   pnpm run dev
-   ```
+6. **Run the Development Server and Client :**
 
-   This command will start the development server, and you can access your React application at `http://localhost:5173`.
+    ```bash
+    cd client
+    pnpm run dev
+
+    cd ../server
+    pnpm run dev
+    ```
+
+    This command will start the development server in the port `http://localhost:3300`, and you can access your React application at `http://localhost:5173`.
 
 ### Option 2: Use degit
 
@@ -75,45 +83,53 @@ Alternatively, you can use `degit` to scaffold the template without cloning the 
 
 1. **Use degit to Fetch the Template:**
 
-   ```bash
-   npx degit Pilag6/rvct my-react-app
-   ```
+    ```bash
+    npx degit Pilag6/MERN my-MERN-app
+    ```
 
-   This command fetches the template without Git history and renames the project to `my-react-app`. You can replace `my-react-app` with your preferred project name.
+    This command fetches the template without Git history and renames the project to `my-MERN-app`. You can replace `my-MERN-app` with your preferred project name.
 
-   If you don't have `degit` installed, you can install it globally using `npm install -g degit`.
+    If you don't have `degit` installed, you can install it globally using `npm install -g degit`.
 
 2. **Navigate to the Project Directory:**
 
-   ```bash
-   cd my-react-app
-   ```
+    ```bash
+    cd my-MERN-app
+    ```
 
 3. **Initialize a New Git Repository:**
 
-   ```bash
-   git init
-   ```
+    ```bash
+    git init
+    ```
 
-   This command initializes a new Git repository for your project.
+    This command initializes a new Git repository for your project.
 
 4. **Install Dependencies using pnpm:**
 
-   ```bash
-   pnpm install
-   ```
+    ```bash
+    cd client
+    pnpm install
 
-   This command installs project dependencies using pnpm. If you don't have pnpm installed, you can install it globally using `npm install -g pnpm`.
+    cd ../server
+    pnpm install
+    ```
+
+    This command installs project dependencies using pnpm. If you don't have pnpm installed, you can install it globally using `npm install -g pnpm`.
 
 5. **Run the Development Server:**
 
-   ```bash
-   pnpm run dev
-   ```
+    ```bash
+    cd client
+    pnpm run dev
 
-   This command will start the development server, and you can access your React application at `http://localhost:5173`.
+    cd ../server
+    pnpm run dev
+    ```
 
-8. ## Folder Structure
+    This command will start the development server in the port `http://localhost:3300`, and you can access your React application at `http://localhost:5173`.
+
+6. ## Folder Structure
 
 -   We are going to follow the **MVC (Model-View-Controller)** pattern for our project structure.
 -   **MVC** is a _software design pattern_ that divides the application into three interconnected components: the model, the view, and the controller.
