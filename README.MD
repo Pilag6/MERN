@@ -1,4 +1,4 @@
-## <img src="./MERN.png" />
+<img src="./MERN.png">
 
 ### This template provides a minimal MERN setup. It's configured to use `pnpm` as the package manager.
 
